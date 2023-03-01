@@ -55,7 +55,7 @@
                 <li class="dropdown"><a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Current Jobs </a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Current Jobs</a></li>
-                    <li><a href="#">Apply Job</a></li>
+                    <li><a href="<?php echo e(url('apply')); ?>">Apply Now</a></li>
                   </ul>
                 </li>
                 <li><a href="#">Contact Us</a></li>

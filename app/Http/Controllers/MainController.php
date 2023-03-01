@@ -78,7 +78,7 @@ class MainController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function getTrack(Request $request)
+	public function getApply(Request $request)
     {
        $user = null;
 
@@ -88,16 +88,10 @@ class MainController extends Controller {
 		}
 
 		$req = $request->all();
-        $result = []; $valid = false;
+		$signals = $this->helpers->signals;
+        $plugins = [];
 
-        if(isset($req['tnum'])){
-           $result = $this->helpers->track($req['tnum'],['mode' => "all"]);
-        }
-        $signals = $this->helpers->signals;
-		$plugins = $this->helpers->getPlugins();
-        #dd($result);
-		if(!isset($result['tracking']) || count($result['tracking']) > 0) $valid = true;
-    	return view('track',compact(['user','result','valid','signals','plugins']));
+       return view('apply',compact(['user','signals','plugins']));
     }
 
 

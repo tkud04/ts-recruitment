@@ -19,19 +19,10 @@ use App\Http\Controllers\AdminController;
 Route::get('/', [MainController::class,'getIndex']);
 Route::get('contact', [MainController::class,'getContact']);
 Route::get('about', [MainController::class,'getAbout']);
-Route::get('why-us', [MainController::class,'getWhyUs']);
-Route::get('google', [MainController::class,'getGoogle']);
+Route::get('apply', [MainController::class,'getApply']);
 
 
-//Authentication
-Route::get('login', [LoginController::class,'getLogin']);
-Route::get('xx', [LoginController::class,'getSignup']);
-Route::post('login', [LoginController::class,'postLogin']);
-Route::post('signup', [LoginController::class,'postSignup']);
-Route::get('bye', [LoginController::class,'getLogout']);
 
-//Tracking
-Route::get('track', [MainController::class,'getTrack']);
 
 //Admin
 Route::get('dashboard', [AdminController::class,'getDashboard']);
