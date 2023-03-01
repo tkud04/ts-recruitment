@@ -1,2 +1,2 @@
-# ts-recruitment
-recruitment site for TS
+# gmail-sender-x2
+Gmail sender for X2
